@@ -1,0 +1,74 @@
+/* ══════════════════════════════════════════════════════════════
+   STAP 1 — Jouw huisstijlkleuren
+   Vervang de waarden hieronder door jouw eigen hex-codes.
+   Je hebt deze al klaarstaan in de prompt-bouwer!
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  --color-primair:      #6B2D84;
+  --color-achtergrond:  #ffffff;
+  --color-tekst:        #1A1F36;
+  --color-accent-1:     #E21B70;
+  --color-accent-2:     #3EDCB1;
+  --color-accent-3:     #6B2D84;
+  --color-wit:          #ffffff;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   STAP 2 — Jouw lettertype: kies Optie A of Optie B
+   ══════════════════════════════════════════════════════════════
+
+   OPTIE A — Google Font
+   ─────────────────────
+   1. Ga naar fonts.google.com
+   2. Zoek jouw font, klik op "Get font" → "Get embed code"
+   3. Kopieer de @import-regel en plak hem hieronder
+   4. Pas de naam in --font-hoofd aan
+
+   Voorbeeld (verwijder de /* en * / om te activeren):
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+   Zet dan onderaan dit blok:
+   --font-hoofd: 'Lato', sans-serif;
+
+
+   OPTIE B — Eigen font (.otf / .ttf / .woff2)
+   ─────────────────────────────────────────────
+   1. Kopieer jouw fontbestand naar de map /public/fonts/
+   2. Pas de bestandsnaam hieronder aan
+   3. Zet onderaan --font-hoofd: 'JouwFont', serif;
+
+   Voorbeeld (verwijder de /* en * / om te activeren):
+
+@font-face {
+  font-family: 'JouwFont';
+  src: url('/fonts/jouwnaam.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+   Zet dan onderaan dit blok:
+   --font-hoofd: 'JouwFont', Georgia, serif;
+
+   ══════════════════════════════════════════════════════════════ */
+
+
+/* ─── Basisstijlen ─────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  min-height: 100vh;
+}
