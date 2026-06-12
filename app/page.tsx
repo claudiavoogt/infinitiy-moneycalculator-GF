@@ -213,7 +213,7 @@ export default function MijnTool() {
         .gf-fn { font-family: 'Lora', serif; font-style: italic; font-size: 11px; color: rgba(26,31,54,0.35); text-align: center; margin-top: 12px; line-height: 1.6; display: block; padding: 0 20px; }
         .gf-footer { background: linear-gradient(110deg,#1A1F36,#6B2D84 70%,#3EDCB1); padding: 28px 20px; text-align: center; margin-top: 4px; }
         .gf-footer p { color: #cdbcd9; font-size: 13px; margin: 0; font-family: 'Lora', serif; }
-        .gf-footer p.gf-footer-copy { margin-top: 6px; opacity: 0.65; font-size: 11px; }
+        .gf-footer p.gf-footer-copy { margin-top: 6px; color: #ffffff; opacity: 0.9; font-size: 11px; }
         .gf-footer a { color: #3EDCB1; text-decoration: underline; }
       `}</style>
 
@@ -357,7 +357,7 @@ export default function MijnTool() {
           {' '}— Beleggingsexpert &amp; investeringsmentor
         </p>
         <p className="gf-footer-copy">
-          © {new Date().getFullYear()} Claudia Voogt. Alle rechten voorbehouden. Deze tool mag niet worden gekopieerd, nagebouwd of hergebruikt zonder schriftelijke toestemming.
+          © 2026 Claudia Voogt. Alle rechten voorbehouden. Deze tool mag niet worden gedeeld, gekopieerd, nagebouwd of hergebruikt zonder schriftelijke toestemming.
         </p>
       </footer>
     </>
