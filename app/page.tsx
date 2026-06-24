@@ -205,6 +205,10 @@ export default function MijnTool() {
         .gf-bd-periode { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 12px; color: #1A1F36; }
         .gf-bd-detail { font-family: 'Lora', serif; font-style: italic; font-size: 11px; color: rgba(26,31,54,0.45); }
         .gf-bd-waarde { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14px; color: #6B2D84; text-align: right; }
+        .gf-bd-row.gap { background: linear-gradient(135deg, rgba(62,220,177,0.08), rgba(107,45,132,0.06)); border: 2px dashed rgba(62,220,177,0.4); }
+        .gf-bd-row.gap .gf-bd-periode { color: #1A1F36; }
+        .gf-bd-row.gap .gf-bd-detail { color: rgba(26,31,54,0.5); }
+        .gf-bd-row.gap .gf-bd-waarde { color: #3EDCB1; }
         .gf-chart-wrap { position: relative; height: 260px; }
         .gf-quote { background: linear-gradient(135deg,#1A1F36,#6B2D84); border-radius: 14px; padding: 24px 28px; text-align: center; margin: 0 20px 20px; }
         .gf-qt { font-family: 'Pacifico', cursive; font-size: clamp(16px,3vw,22px); color: #E21B70; margin-bottom: 8px; line-height: 1.4; display: block; }
@@ -331,6 +335,22 @@ export default function MijnTool() {
                     </div>
                   );
                 })}
+                {(() => {
+                  const laatste = berekening.resultaten[berekening.resultaten.length - 1];
+                  if (!laatste || laatste.tot >= doel) return null;
+                  const jaren = doel - laatste.tot;
+                  const groei = berekening.eindKapitaal - laatste.kapNa;
+                  return (
+                    <div className="gf-bd-row gap">
+                      <div className="gf-bd-kleur" style={{ background: '#3EDCB1' }}></div>
+                      <div className="gf-bd-info">
+                        <div className="gf-bd-periode">{laatste.tot}–{doel} jaar · €0/mnd — stille groei</div>
+                        <div className="gf-bd-detail">geen inleg · rendement {eur(Math.max(0, groei))} over {jaren} jaar</div>
+                      </div>
+                      <div className="gf-bd-waarde">{eur(berekening.eindKapitaal)}</div>
+                    </div>
+                  );
+                })()}
               </div>
               <div className="gf-divider"></div>
               <div className="gf-chart-wrap">
