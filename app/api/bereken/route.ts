@@ -10,7 +10,7 @@ interface Fase {
 
 function fv(pv: number, pmt: number, jaren: number, rendPct: number): number {
   if (jaren <= 0) return pv;
-  const r = rendPct / 100 / 12;
+  const r = Math.pow(1 + rendPct / 100, 1 / 12) - 1;
   const n = jaren * 12;
   if (r === 0) return pv + pmt * n;
   const g = Math.pow(1 + r, n);
