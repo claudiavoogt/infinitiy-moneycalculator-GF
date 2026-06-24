@@ -262,7 +262,7 @@ export default function MijnTool() {
               </div>
             </div>
             <div className="gf-divider"></div>
-            <p className="gf-uitleg">Vul hieronder in wat je kind inlegt per maand en tot welke leeftijd. Je kunt de leeftijden aanpassen, spelen met bedragen of een leeftijdfase toevoegen.</p>
+            <p className="gf-uitleg" style={{ color: '#3EDCB1' }}>Vul hieronder in wat je kind inlegt per maand en tot welke leeftijd. Je kunt de leeftijden aanpassen, spelen met bedragen of een leeftijdfase toevoegen of juist verwijderen d.m.v. het kruisje.</p>
             <span className="gf-tl-header">Tijdlijn — wat legt je kind in per fase?</span>
             <div>
               {fases.map((f, i) => (
