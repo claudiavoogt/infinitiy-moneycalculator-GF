@@ -218,6 +218,7 @@ export default function MijnTool() {
         .gf-footer { background: linear-gradient(110deg,#1A1F36,#6B2D84 70%,#3EDCB1); padding: 28px 20px; text-align: center; margin-top: 4px; }
         .gf-footer p { color: #cdbcd9; font-size: 13px; margin: 0; font-family: 'Lora', serif; }
         .gf-footer p.gf-footer-copy { margin-top: 6px; color: #ffffff; opacity: 0.9; font-size: 11px; }
+        .gf-footer p.gf-footer-disclaimer { margin-top: 10px; color: rgba(255,255,255,0.5); font-size: 10px; line-height: 1.6; max-width: 560px; margin-left: auto; margin-right: auto; }
         .gf-footer a { color: #3EDCB1; text-decoration: underline; }
       `}</style>
 
@@ -378,6 +379,9 @@ export default function MijnTool() {
         </p>
         <p className="gf-footer-copy">
           © 2026 Claudia Voogt. Alle rechten voorbehouden. Deze tool mag niet worden gedeeld, gekopieerd, nagebouwd of hergebruikt zonder schriftelijke toestemming.
+        </p>
+        <p className="gf-footer-disclaimer">
+          Deze tool is een hulpmiddel, geen beleggingsadvies. De informatie is met zorg samengesteld, maar er kunnen geen rechten aan worden ontleend. Juistheid en volledigheid worden niet gegarandeerd.
         </p>
       </footer>
     </>
